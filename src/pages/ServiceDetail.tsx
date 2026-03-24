@@ -41,7 +41,7 @@ export default function ServiceDetail() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-3xl"
           >
-            <Link to="/" className="inline-flex items-center text-blue-400 font-bold mb-6 hover:text-blue-300 transition-colors group">
+            <Link to="/" className="inline-flex items-center text-sky-400 font-bold mb-6 hover:text-sky-300 transition-colors group">
               <ArrowLeft className="mr-2 w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span>Back to Services</span>
             </Link>
@@ -70,30 +70,30 @@ export default function ServiceDetail() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 {service.benefits.map((benefit, i) => (
-                  <div key={i} className="flex items-center space-x-3 p-4 bg-slate-50 rounded-2xl border border-slate-100">
-                    <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0" />
+                   <div key={i} className="flex items-center space-x-3 p-4 bg-sky-50 rounded-2xl border border-sky-100">
+                    <CheckCircle2 className="w-6 h-6 text-sky-600 flex-shrink-0" />
                     <span className="text-slate-700 font-medium">{benefit}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="bg-slate-900 rounded-3xl p-10 text-white relative overflow-hidden">
+              <div className="bg-sky-400 rounded-3xl p-10 text-white relative overflow-hidden shadow-xl shadow-sky-400/20">
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold mb-4">Ready to get started?</h3>
-                  <p className="text-slate-400 mb-8 max-w-md">
+                  <p className="text-sky-50 mb-8 max-w-md">
                     Contact us today for a customized quote tailored to your specific {service.title.toLowerCase()} requirements.
                   </p>
                   <button
                     onClick={() => setIsQuoteModalOpen(true)}
-                    className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-500 transition-all flex items-center space-x-2"
+                    className="bg-white text-sky-500 px-8 py-4 rounded-full font-bold hover:bg-sky-50 transition-all flex items-center space-x-2 shadow-lg"
                   >
                     <span>Request a Quote</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-                <ShieldCheck className="absolute -bottom-10 -right-10 w-64 h-64 text-white/5 transform rotate-12" />
+                <ShieldCheck className="absolute -bottom-10 -right-10 w-64 h-64 text-white/10 transform rotate-12" />
               </div>
             </div>
 
@@ -106,24 +106,24 @@ export default function ServiceDetail() {
                     <Link
                       key={s.id}
                       to={`/services/${s.id}`}
-                      className="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all group"
+                      className="flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 hover:border-sky-500 hover:shadow-md transition-all group"
                     >
-                      <span className="font-bold text-slate-700 group-hover:text-blue-600 transition-colors">{s.title}</span>
-                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                      <span className="font-bold text-slate-700 group-hover:text-sky-600 transition-colors">{s.title}</span>
+                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-sky-600 group-hover:translate-x-1 transition-all" />
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-blue-600 rounded-3xl p-8 text-white">
+              <div className="bg-sky-500 rounded-3xl p-8 text-white">
                 <div className="flex items-center space-x-3 mb-6">
                   <Clock className="w-6 h-6" />
                   <h3 className="text-xl font-bold">Fast Response</h3>
                 </div>
-                <p className="text-blue-100 mb-6 text-sm leading-relaxed">
+                <p className="text-sky-50 mb-6 text-sm leading-relaxed">
                   We pride ourselves on our quick turnaround times. Most quotes are delivered within 24 hours of your request.
                 </p>
-                <Link to="/contact" className="text-white font-bold underline underline-offset-4 hover:text-blue-200 transition-colors">
+                <Link to="/contact" className="text-white font-bold underline underline-offset-4 hover:text-sky-100 transition-colors">
                   Contact Support
                 </Link>
               </div>

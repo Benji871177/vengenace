@@ -6,14 +6,15 @@ export default function About() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="bg-slate-900 py-32 relative overflow-hidden">
+      <section className="bg-sky-400 py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=2000&auto=format&fit=crop"
             alt="Professional cleaning team"
-            className="w-full h-full object-cover brightness-[0.3]"
+            className="w-full h-full object-cover brightness-[0.5]"
             referrerPolicy="no-referrer"
           />
+          <div className="absolute inset-0 bg-sky-600/20" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -21,7 +22,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">Our Story</h1>
-            <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-sky-50 max-w-2xl mx-auto leading-relaxed">
               Founded on the principles of precision and integrity, Vengeance Cleaning Company has grown from a local startup to a leading provider of premium cleaning solutions.
             </p>
           </motion.div>
@@ -33,7 +34,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Our Mission</h2>
+              <h2 className="text-xs font-bold text-sky-600 uppercase tracking-widest mb-4">Our Mission</h2>
               <h3 className="text-4xl font-display font-bold text-slate-900 mb-8 leading-tight">We Believe in a Cleaner, Healthier World</h3>
               <p className="text-slate-500 text-lg mb-8 leading-relaxed">
                 Our mission is to provide unmatched cleaning services that enhance the quality of life and work for our clients. We combine advanced technology with a human touch to ensure every space we touch is transformed.
@@ -48,7 +49,7 @@ export default function About() {
                   "Community Commitment"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center space-x-3">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                    <CheckCircle2 className="w-5 h-5 text-sky-600" />
                     <span className="text-slate-700 font-bold">{item}</span>
                   </div>
                 ))}
@@ -65,7 +66,7 @@ export default function About() {
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden md:block">
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-blue-600 rounded-xl">
+                  <div className="p-3 bg-sky-600 rounded-xl">
                     <Star className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -83,7 +84,7 @@ export default function About() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Our Values</h2>
+            <h2 className="text-xs font-bold text-sky-600 uppercase tracking-widest mb-4">Our Values</h2>
             <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">The Pillars of Our Success</h3>
             <p className="text-slate-500 text-lg">
               Every member of the Vengeance team lives by these core values, ensuring consistency and quality in every job we perform.
@@ -98,8 +99,8 @@ export default function About() {
               { title: "Security", desc: "We are fully insured and vetted for your peace of mind.", icon: ShieldCheck },
             ].map((value, i) => (
               <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
-                <div className="p-4 bg-slate-50 rounded-2xl mb-6 group-hover:bg-blue-600 transition-colors">
-                  <value.icon className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors" />
+                <div className="p-4 bg-slate-50 rounded-2xl mb-6 group-hover:bg-sky-600 transition-colors">
+                  <value.icon className="w-8 h-8 text-sky-600 group-hover:text-white transition-colors" />
                 </div>
                 <h4 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h4>
                 <p className="text-slate-500 text-sm leading-relaxed">{value.desc}</p>
@@ -113,7 +114,7 @@ export default function About() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Leadership</h2>
+            <h2 className="text-xs font-bold text-sky-600 uppercase tracking-widest mb-4">Leadership</h2>
             <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">Meet the Visionaries</h3>
           </div>
 
@@ -125,7 +126,7 @@ export default function About() {
             ].map((member, i) => (
               <div key={i} className="text-center group">
                 <div className="relative mb-6 inline-block">
-                  <div className="w-64 h-64 rounded-full overflow-hidden border-8 border-slate-50 group-hover:border-blue-100 transition-colors">
+                  <div className="w-64 h-64 rounded-full overflow-hidden border-8 border-slate-50 group-hover:border-sky-100 transition-colors">
                     <img
                       src={member.img}
                       alt={member.name}
@@ -133,12 +134,12 @@ export default function About() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <div className="absolute bottom-0 right-0 p-3 bg-blue-600 rounded-full text-white shadow-lg">
+                  <div className="absolute bottom-0 right-0 p-3 bg-sky-600 rounded-full text-white shadow-lg">
                     <ShieldCheck className="w-6 h-6" />
                   </div>
                 </div>
                 <h4 className="text-2xl font-bold text-slate-900 mb-1">{member.name}</h4>
-                <p className="text-blue-600 font-bold uppercase tracking-widest text-xs">{member.role}</p>
+                <p className="text-sky-600 font-bold uppercase tracking-widest text-xs">{member.role}</p>
               </div>
             ))}
           </div>

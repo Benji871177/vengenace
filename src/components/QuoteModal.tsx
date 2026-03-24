@@ -69,7 +69,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
                         <input
                           required
                           type="text"
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all"
                           placeholder="John Doe"
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -80,7 +80,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
                         <input
                           required
                           type="email"
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all"
                           placeholder="john@example.com"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -94,7 +94,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
                         <input
                           required
                           type="tel"
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all"
                           placeholder="(555) 000-0000"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -104,7 +104,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
                         <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Service Needed</label>
                         <select
                           required
-                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all appearance-none bg-white"
+                          className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all appearance-none bg-white"
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                         >
@@ -120,7 +120,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
                       <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Message (Optional)</label>
                       <textarea
                         rows={4}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all resize-none"
                         placeholder="Tell us more about the project..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -129,7 +129,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
 
                     <button
                       type="submit"
-                      className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold flex items-center justify-center space-x-2 hover:bg-blue-600 transition-all active:scale-[0.98]"
+                      className="w-full bg-sky-400 text-white py-4 rounded-xl font-bold flex items-center justify-center space-x-2 hover:bg-sky-500 transition-all active:scale-[0.98] shadow-lg shadow-sky-400/20"
                     >
                       <span>Send Request</span>
                       <Send className="w-4 h-4" />
@@ -166,7 +166,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
                   </p>
                   <button
                     onClick={onClose}
-                    className="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-800 transition-colors"
+                    className="bg-sky-400 text-white px-8 py-3 rounded-xl font-bold hover:bg-sky-500 transition-colors shadow-lg shadow-sky-400/20"
                   >
                     Close
                   </button>

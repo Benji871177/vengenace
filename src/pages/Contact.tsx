@@ -16,6 +16,18 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
+            <div className="flex justify-center mb-8">
+              <div className="h-20 w-20 flex items-center justify-center bg-white rounded-2xl shadow-xl p-2">
+                <img 
+                  src="https://drive.google.com/uc?export=download&id=1wdOvGsY08Yw41EHYNBm0-aDDIy6RJhUk" 
+                  alt="Vengeance Cleaning Logo" 
+                  className="h-full w-full object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=100&auto=format&fit=crop";
+                  }}
+                />
+              </div>
+            </div>
             <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 mb-6">Get in Touch</h1>
             <p className="text-xl text-slate-500 max-w-2xl mx-auto">
               Have questions about our services or need a custom cleaning plan? Our team is ready to help you.
@@ -42,8 +54,8 @@ export default function Contact() {
                   { icon: Globe, title: "Social", detail: "@vengeancecleaning", sub: "Follow our work" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start space-x-4">
-                    <div className="p-3 bg-blue-50 rounded-xl">
-                      <item.icon className="w-6 h-6 text-blue-600" />
+                    <div className="p-3 bg-sky-50 rounded-xl">
+                      <item.icon className="w-6 h-6 text-sky-600" />
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900 mb-1">{item.title}</h4>
@@ -54,13 +66,13 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className="bg-slate-900 rounded-3xl p-10 text-white flex items-center space-x-6">
-                <div className="p-4 bg-blue-600 rounded-2xl">
+              <div className="bg-sky-400 rounded-3xl p-10 text-white flex items-center space-x-6 shadow-xl shadow-sky-400/20">
+                <div className="p-4 bg-white/20 backdrop-blur-md rounded-2xl">
                   <MessageSquare className="w-8 h-8" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-1">Live Chat Support</h4>
-                  <p className="text-slate-400 text-sm">Need immediate assistance? Our agents are online and ready to chat.</p>
+                  <h4 className="text-xl font-bold mb-1 text-white">Live Chat Support</h4>
+                  <p className="text-sky-50 text-sm">Need immediate assistance? Our agents are online and ready to chat.</p>
                 </div>
               </div>
             </div>
@@ -74,7 +86,7 @@ export default function Contact() {
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">First Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white"
                       placeholder="John"
                     />
                   </div>
@@ -82,7 +94,7 @@ export default function Contact() {
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Last Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white"
                       placeholder="Doe"
                     />
                   </div>
@@ -91,13 +103,13 @@ export default function Contact() {
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Email Address</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white"
                     placeholder="john@example.com"
                   />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Service Needed</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white appearance-none">
+                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white appearance-none">
                     <option value="">Select a service</option>
                     {SERVICES.map((s) => (
                       <option key={s.id} value={s.id}>{s.title}</option>
@@ -108,13 +120,13 @@ export default function Contact() {
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Message</label>
                   <textarea
                     rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all bg-white resize-none"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white resize-none"
                     placeholder="How can we help you?"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold flex items-center justify-center space-x-2 hover:bg-blue-600 transition-all active:scale-[0.98]"
+                  className="w-full bg-sky-400 text-white py-4 rounded-xl font-bold flex items-center justify-center space-x-2 hover:bg-sky-500 transition-all active:scale-[0.98] shadow-lg shadow-sky-400/20"
                 >
                   <span>Send Message</span>
                   <Send className="w-4 h-4" />
