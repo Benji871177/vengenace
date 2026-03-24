@@ -30,17 +30,8 @@ export default function Footer() {
               Premium cleaning solutions for every environment. We bring a relentless commitment to cleanliness, ensuring your space is spotless and sanitized.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white border border-sky-100 flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all">
+              <a href="https://www.facebook.com/share/1GYEHSEcCb/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white border border-sky-100 flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all">
                 <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white border border-sky-100 flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white border border-sky-100 flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white border border-sky-100 flex items-center justify-center hover:bg-sky-400 hover:text-white transition-all">
-                <Linkedin className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -76,11 +67,11 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-sky-500 flex-shrink-0" />
-                <span className="text-slate-500 text-sm">123 Cleaning Ave, Suite 500<br />San Francisco, CA 94103</span>
+                <span className="text-slate-500 text-sm">1 patton street Maitland,<br />cape Town South Africa, 7404</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-sky-500 flex-shrink-0" />
-                <span className="text-slate-500 text-sm">+1 (555) 123-4567</span>
+                <span className="text-slate-500 text-sm">074 274 2289</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-sky-500 flex-shrink-0" />

@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, MessageCircle }
 import { SERVICES } from "../constants";
 
 export default function Contact() {
-  const whatsappNumber = "15551234567"; // Example number
+  const whatsappNumber = "27742742289"; 
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
@@ -43,15 +43,15 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-display font-bold text-slate-900 mb-8">Contact Information</h2>
               <p className="text-slate-500 mb-12 text-lg leading-relaxed">
-                Reach out to us through any of these channels, or visit our office in downtown San Francisco. We're always happy to discuss how we can make your space spotless.
+                Reach out to us through any of these channels, or visit our office in Maitland. We're always happy to discuss how we can make your space spotless.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                 {[
-                  { icon: Phone, title: "Phone", detail: "+1 (555) 123-4567", sub: "Mon-Fri, 8am-6pm" },
+                  { icon: Phone, title: "Phone", detail: "074 274 2289", sub: "Mon-Fri, 8am-6pm" },
                   { icon: Mail, title: "Email", detail: "info@vengeancecleaning.com", sub: "24/7 Support" },
-                  { icon: MapPin, title: "Office", detail: "123 Cleaning Ave, Suite 500", sub: "San Francisco, CA 94103" },
-                  { icon: Globe, title: "Social", detail: "@vengeancecleaning", sub: "Follow our work" },
+                  { icon: MapPin, title: "Office", detail: "1 patton street Maitland", sub: "cape Town South Africa, 7404" },
+                  { icon: Globe, title: "Social", detail: "Vengeance Cleaning", sub: "Follow our work" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start space-x-4">
                     <div className="p-3 bg-sky-50 rounded-xl">

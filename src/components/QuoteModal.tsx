@@ -10,7 +10,7 @@ interface QuoteModalProps {
 }
 
 export default function QuoteModal({ isOpen, onClose, initialService }: QuoteModalProps) {
-  const whatsappNumber = "15551234567"; // Example number
+  const whatsappNumber = "27742742289"; 
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -95,7 +95,7 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
                           required
                           type="tel"
                           className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all"
-                          placeholder="(555) 000-0000"
+                          placeholder="074 274 2289"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         />

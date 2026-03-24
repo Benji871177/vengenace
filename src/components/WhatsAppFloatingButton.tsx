@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function WhatsAppFloatingButton() {
-  const whatsappNumber = "15551234567"; // Example number
+  const whatsappNumber = "27742742289"; 
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (

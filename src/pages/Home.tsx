@@ -33,19 +33,13 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center space-x-4 mb-8">
-                <div className="h-20 w-20 flex items-center justify-center bg-white rounded-2xl shadow-2xl p-2">
-                  <img 
-                    src="https://drive.google.com/uc?export=download&id=1wdOvGsY08Yw41EHYNBm0-aDDIy6RJhUk" 
-                    alt="Vengeance Cleaning Logo" 
-                    className="h-full w-full object-contain"
-                    onError={(e) => {
-                      e.currentTarget.src = "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=100&auto=format&fit=crop";
-                    }}
-                  />
-                </div>
-                <div className="h-px w-12 bg-sky-400/50" />
-                <span className="text-white/60 text-sm font-bold uppercase tracking-[0.3em]">Est. 2026</span>
+              <div className="mb-8">
+                <img 
+                  src="https://drive.google.com/uc?export=download&id=1wdOvGsY08Yw41EHYNBm0-aDDIy6RJhUk" 
+                  alt="Vengeance Cleaning Logo" 
+                  className="h-28 w-auto object-contain"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <div className="inline-flex items-center space-x-2 bg-sky-600/20 backdrop-blur-md border border-sky-400/30 px-4 py-2 rounded-full mb-6">
                 <ShieldCheck className="w-4 h-4 text-sky-400" />
