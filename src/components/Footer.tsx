@@ -38,7 +38,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-6 text-slate-900">Quick Links</h3>
             <ul className="space-y-4">
               <li><Link to="/" className="text-slate-500 hover:text-sky-500 transition-colors text-sm">Home</Link></li>
-              <li><Link to="/about" className="text-slate-500 hover:text-sky-500 transition-colors text-sm">About Us</Link></li>
+              <li><Link to="/about" className="text-slate-500 hover:text-sky-500 transition-colors text-sm">Our Story</Link></li>
               <li><Link to="/contact" className="text-slate-500 hover:text-sky-500 transition-colors text-sm">Contact</Link></li>
               <li><Link to="/contact" className="text-slate-500 hover:text-sky-500 transition-colors text-sm">Request a Quote</Link></li>
             </ul>

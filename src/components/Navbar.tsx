@@ -61,6 +61,13 @@ export default function Navbar() {
               Home
             </Link>
             
+            <Link 
+              to="/about" 
+              className="text-sm font-medium transition-colors text-slate-900 hover:text-sky-600"
+            >
+              Our Story
+            </Link>
+
             <div 
               className="relative group"
               onMouseEnter={() => setIsDropdownOpen(true)}
@@ -94,12 +101,6 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link 
-              to="/about" 
-              className="text-sm font-medium transition-colors text-slate-900 hover:text-sky-600"
-            >
-              About
-            </Link>
             <Link 
               to="/contact" 
               className="text-sm font-medium transition-colors text-slate-900 hover:text-sky-600"
@@ -138,6 +139,7 @@ export default function Navbar() {
           >
             <div className="px-4 pt-2 pb-6 space-y-1">
               <Link to="/" className="block px-3 py-4 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-lg">Home</Link>
+              <Link to="/about" className="block px-3 py-4 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-lg">Our Story</Link>
               <div className="px-3 py-4">
                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Our Services</p>
                 <div className="grid grid-cols-1 gap-2">
@@ -152,7 +154,6 @@ export default function Navbar() {
                   ))}
                 </div>
               </div>
-              <Link to="/about" className="block px-3 py-4 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-lg">About</Link>
               <Link to="/contact" className="block px-3 py-4 text-base font-medium text-slate-700 hover:bg-slate-50 rounded-lg">Contact</Link>
               <div className="pt-4 px-3">
                 <Link 
