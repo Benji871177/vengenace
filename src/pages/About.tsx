@@ -9,7 +9,7 @@ export default function About() {
       <section className="bg-sky-400 py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=2000&auto=format&fit=crop"
+            src="https://images.pexels.com/photos/6195288/pexels-photo-6195288.jpeg"
             alt="Professional cleaning team"
             className="w-full h-full object-cover brightness-[0.5]"
             referrerPolicy="no-referrer"
@@ -58,7 +58,7 @@ export default function About() {
             <div className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=1000&auto=format&fit=crop"
+                  src="https://images.pexels.com/photos/6195288/pexels-photo-6195288.jpeg"
                   alt="Spotless home environment"
                   className="w-full h-auto"
                   referrerPolicy="no-referrer"
@@ -110,41 +110,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-xs font-bold text-sky-600 uppercase tracking-widest mb-4">Leadership</h2>
-            <h3 className="text-4xl font-display font-bold text-slate-900 mb-6">Meet the Visionaries</h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            {[
-              { name: "Marcus Vane", role: "Founder & CEO", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" },
-              { name: "Elena Rodriguez", role: "Operations Director", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop" },
-              { name: "David Chen", role: "Head of Industrial Services", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" },
-            ].map((member, i) => (
-              <div key={i} className="text-center group">
-                <div className="relative mb-6 inline-block">
-                  <div className="w-64 h-64 rounded-full overflow-hidden border-8 border-slate-50 group-hover:border-sky-100 transition-colors">
-                    <img
-                      src={member.img}
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                  <div className="absolute bottom-0 right-0 p-3 bg-sky-600 rounded-full text-white shadow-lg">
-                    <ShieldCheck className="w-6 h-6" />
-                  </div>
-                </div>
-                <h4 className="text-2xl font-bold text-slate-900 mb-1">{member.name}</h4>
-                <p className="text-sky-600 font-bold uppercase tracking-widest text-xs">{member.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

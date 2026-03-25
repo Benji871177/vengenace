@@ -2,6 +2,14 @@ import { Service } from "./types";
 
 export const SERVICES: Service[] = [
   {
+    id: "window-cleaning",
+    title: "Window Cleaning",
+    description: "Crystal clear windows for a brighter, more beautiful view.",
+    longDescription: "Our professional window cleaning service ensures your home or business looks its best. We use specialized tools and techniques to remove dirt, grime, and streaks from all types of windows, including high-reach areas. Enjoy the benefits of more natural light and a pristine appearance.",
+    image: "https://images.pexels.com/photos/6197122/pexels-photo-6197122.jpeg",
+    benefits: ["Streak-free finish", "Safe high-reach cleaning", "Improved natural light", "Enhanced curb appeal"]
+  },
+  {
     id: "solar-panel",
     title: "Solar Panel Cleaning",
     description: "Maximize your energy efficiency with our specialized solar panel cleaning service.",
@@ -22,7 +30,7 @@ export const SERVICES: Service[] = [
     title: "Restaurant Deep Cleaning",
     description: "Meeting the highest standards of hygiene for your kitchen and dining areas.",
     longDescription: "In the food industry, cleanliness is non-negotiable. Our deep cleaning service targets grease buildup, sanitizes high-touch surfaces, and ensures your kitchen meets all health and safety regulations. We handle everything from exhaust hoods to floor drains.",
-    image: "https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/5779776/pexels-photo-5779776.jpeg",
     benefits: ["Health code compliance", "Fire risk reduction", "Improved food safety", "Odor elimination"]
   },
   {
@@ -38,7 +46,7 @@ export const SERVICES: Service[] = [
     title: "Industrial Cleaning",
     description: "Heavy-duty cleaning for factories, warehouses, and industrial sites.",
     longDescription: "Industrial environments require specialized knowledge and equipment. Vengeance Cleaning Company is equipped to handle large-scale cleaning tasks, including machinery degreasing, warehouse floor scrubbing, and high-level dusting in industrial facilities.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/6195953/pexels-photo-6195953.jpeg",
     benefits: ["Enhanced workplace safety", "Specialized equipment usage", "Compliance with OSHA standards", "Efficient large-scale operations"]
   },
   {

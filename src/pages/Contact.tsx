@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, MessageCircle }
 import { SERVICES } from "../constants";
 
 export default function Contact() {
-  const whatsappNumber = "27742742289"; 
+  const whatsappNumber = "27742742269"; 
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (
@@ -17,14 +17,12 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
           >
             <div className="flex justify-center mb-8">
-              <div className="h-20 w-20 flex items-center justify-center bg-white rounded-2xl shadow-xl p-2">
+              <div className="h-24 w-24 flex items-center justify-center bg-white rounded-2xl shadow-xl p-2">
                 <img 
-                  src="https://drive.google.com/uc?export=download&id=1wdOvGsY08Yw41EHYNBm0-aDDIy6RJhUk" 
+                  src="https://i.postimg.cc/vH7GqkgD/Untitled-design-(23).png" 
                   alt="Vengeance Cleaning Logo" 
                   className="h-full w-full object-contain"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=100&auto=format&fit=crop";
-                  }}
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
@@ -48,7 +46,7 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                 {[
-                  { icon: Phone, title: "Phone", detail: "074 274 2289", sub: "Mon-Fri, 8am-6pm" },
+                  { icon: Phone, title: "Phone", detail: "074 274 2269", sub: "Mon-Fri, 8am-6pm" },
                   { icon: Mail, title: "Email", detail: "info@vengeancecleaning.com", sub: "24/7 Support" },
                   { icon: MapPin, title: "Office", detail: "1 patton street Maitland", sub: "cape Town South Africa, 7404" },
                   { icon: Globe, title: "Social", detail: "Vengeance Cleaning", sub: "Follow our work" },

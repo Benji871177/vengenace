@@ -34,35 +34,45 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative h-14 w-14 flex items-center justify-center bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-sky-500/30 transition-all duration-300 p-1">
+            <div className="relative h-16 w-16 flex items-center justify-center bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-sky-500/30 transition-all duration-300 p-1">
               <img 
-                src="https://drive.google.com/uc?export=download&id=1wdOvGsY08Yw41EHYNBm0-aDDIy6RJhUk" 
+                src="https://i.postimg.cc/vH7GqkgD/Untitled-design-(23).png" 
                 alt="Vengeance Cleaning Logo" 
                 className="h-full w-full object-contain"
-                onError={(e) => {
-                  // Fallback if the drive link fails
-                  e.currentTarget.src = "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=100&auto=format&fit=crop";
-                }}
+                referrerPolicy="no-referrer"
               />
             </div>
             <span className={cn(
               "text-xl font-display font-bold tracking-tight hidden sm:block",
-              isScrolled ? "text-slate-900" : "text-slate-900"
+              isScrolled ? "text-slate-900" : "text-white"
             )}>
-              VENGEANCE <span className="text-sky-600">CLEANING</span>
+              VENGEANCE <span className={isScrolled ? "text-sky-600" : "text-sky-400"}>CLEANING</span>
             </span>
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-sm font-medium hover:text-sky-600 transition-colors">Home</Link>
+            <Link 
+              to="/" 
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
+              )}
+            >
+              Home
+            </Link>
             
             <div 
               className="relative group"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className="flex items-center text-sm font-medium hover:text-sky-600 transition-colors">
+              <button 
+                className={cn(
+                  "flex items-center text-sm font-medium transition-colors",
+                  isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
+                )}
+              >
                 Services <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               
@@ -88,8 +98,24 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link to="/about" className="text-sm font-medium hover:text-sky-600 transition-colors">About</Link>
-            <Link to="/contact" className="text-sm font-medium hover:text-sky-600 transition-colors">Contact</Link>
+            <Link 
+              to="/about" 
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
+              )}
+            >
+              About
+            </Link>
+            <Link 
+              to="/contact" 
+              className={cn(
+                "text-sm font-medium transition-colors",
+                isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
+              )}
+            >
+              Contact
+            </Link>
             
             <Link 
               to="/contact" 

@@ -18,12 +18,12 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover brightness-[0.4]"
+            className="w-full h-full object-cover brightness-[0.6]"
           >
             <source src="https://www.pexels.com/download/video/4151331/" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -33,14 +33,6 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="mb-8">
-                <img 
-                  src="https://drive.google.com/uc?export=download&id=1wdOvGsY08Yw41EHYNBm0-aDDIy6RJhUk" 
-                  alt="Vengeance Cleaning Logo" 
-                  className="h-28 w-auto object-contain"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
               <div className="inline-flex items-center space-x-2 bg-sky-600/20 backdrop-blur-md border border-sky-400/30 px-4 py-2 rounded-full mb-6">
                 <ShieldCheck className="w-4 h-4 text-sky-400" />
                 <span className="text-sky-100 text-xs font-bold uppercase tracking-widest">Certified Cleaning Experts</span>

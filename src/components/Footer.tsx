@@ -11,15 +11,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center space-x-3 group">
-              <div className="relative h-14 w-14 flex items-center justify-center bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-sky-500/30 transition-all duration-300 p-1">
+              <div className="relative h-16 w-16 flex items-center justify-center bg-white rounded-xl overflow-hidden shadow-lg group-hover:shadow-sky-500/30 transition-all duration-300 p-1">
                 <img 
-                  src="https://drive.google.com/uc?export=download&id=1wdOvGsY08Yw41EHYNBm0-aDDIy6RJhUk" 
+                  src="https://i.postimg.cc/vH7GqkgD/Untitled-design-(23).png" 
                   alt="Vengeance Cleaning Logo" 
                   className="h-full w-full object-contain"
-                  onError={(e) => {
-                    // Fallback if the drive link fails
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=100&auto=format&fit=crop";
-                  }}
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <span className="text-2xl font-display font-bold tracking-tight text-slate-900">
@@ -71,7 +68,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-sky-500 flex-shrink-0" />
-                <span className="text-slate-500 text-sm">074 274 2289</span>
+                <span className="text-slate-500 text-sm">074 274 2269</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-sky-500 flex-shrink-0" />
