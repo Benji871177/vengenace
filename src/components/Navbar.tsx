@@ -28,7 +28,9 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
+        isScrolled || window.innerWidth >= 768 
+          ? "bg-white/95 backdrop-blur-md shadow-sm py-3" 
+          : "bg-transparent py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,9 +46,9 @@ export default function Navbar() {
             </div>
             <span className={cn(
               "text-xl font-display font-bold tracking-tight hidden sm:block",
-              isScrolled ? "text-slate-900" : "text-white"
+              isScrolled || window.innerWidth >= 768 ? "text-slate-900" : "text-white"
             )}>
-              VENGEANCE <span className={isScrolled ? "text-sky-600" : "text-sky-400"}>CLEANING</span>
+              VENGEANCE <span className={isScrolled || window.innerWidth >= 768 ? "text-sky-600" : "text-sky-400"}>CLEANING</span>
             </span>
           </Link>
 
@@ -54,10 +56,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               to="/" 
-              className={cn(
-                "text-sm font-medium transition-colors",
-                isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
-              )}
+              className="text-sm font-medium transition-colors text-slate-900 hover:text-sky-600"
             >
               Home
             </Link>
@@ -68,10 +67,7 @@ export default function Navbar() {
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
               <button 
-                className={cn(
-                  "flex items-center text-sm font-medium transition-colors",
-                  isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
-                )}
+                className="flex items-center text-sm font-medium transition-colors text-slate-900 hover:text-sky-600"
               >
                 Services <ChevronDown className="ml-1 w-4 h-4" />
               </button>
@@ -100,19 +96,13 @@ export default function Navbar() {
 
             <Link 
               to="/about" 
-              className={cn(
-                "text-sm font-medium transition-colors",
-                isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
-              )}
+              className="text-sm font-medium transition-colors text-slate-900 hover:text-sky-600"
             >
               About
             </Link>
             <Link 
               to="/contact" 
-              className={cn(
-                "text-sm font-medium transition-colors",
-                isScrolled ? "text-slate-900 hover:text-sky-600" : "text-white hover:text-sky-400"
-              )}
+              className="text-sm font-medium transition-colors text-slate-900 hover:text-sky-600"
             >
               Contact
             </Link>
