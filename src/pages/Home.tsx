@@ -11,53 +11,14 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover brightness-[0.6]"
-          >
-            <source src="https://www.pexels.com/download/video/4151331/" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-flex items-center space-x-2 bg-sky-600/20 backdrop-blur-md border border-sky-400/30 px-4 py-2 rounded-full mb-6">
-                <ShieldCheck className="w-4 h-4 text-sky-400" />
-                <span className="text-sky-100 text-xs font-bold uppercase tracking-widest">Certified Cleaning Experts</span>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
-                Relentless Clean. <br />
-                <span className="text-sky-400">Unmatched Precision.</span>
-              </h1>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <button
-                  onClick={() => setIsQuoteModalOpen(true)}
-                  className="bg-sky-400 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-sky-300 transition-all hover:shadow-xl hover:shadow-sky-400/20 flex items-center justify-center group"
-                >
-                  <span>Request a Quote</span>
-                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <Link
-                  to="/services/office"
-                  className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center"
-                >
-                  Explore Services
-                </Link>
-              </div>
-            </motion.div>
-          </div>
+      <section className="relative flex items-center pt-20 overflow-hidden bg-slate-50">
+        <div className="w-full max-w-7xl mx-auto">
+          <img
+            src="https://i.postimg.cc/Pqf6Gs9h/Whats-App-Image-2026-03-26-at-22-44-00-(1).jpg"
+            alt="Vengeance Cleaning Hero"
+            className="w-full h-auto object-contain"
+            referrerPolicy="no-referrer"
+          />
         </div>
       </section>
 
