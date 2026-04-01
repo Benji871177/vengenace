@@ -23,10 +23,20 @@ export default function QuoteModal({ isOpen, onClose, initialService }: QuoteMod
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitted(true);
-    }, 1000);
+    
+    const subject = encodeURIComponent(`New Quote Request: ${formData.service || 'General'}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Service: ${formData.service}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:info@vengeancecleaningcompany.co.za?subject=${subject}&body=${body}`;
+    
+    // Still show the success state
+    setIsSubmitted(true);
   };
 
   return (

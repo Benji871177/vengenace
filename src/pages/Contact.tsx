@@ -47,7 +47,7 @@ export default function Contact() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                 {[
                   { icon: Phone, title: "Phone", detail: "074 274 2269", sub: "Mon-Fri, 8am-6pm" },
-                  { icon: Mail, title: "Email", detail: "info@vengeancecleaning.com", sub: "24/7 Support" },
+                  { icon: Mail, title: "Email", detail: "info@vengeancecleaningcompany.co.za", sub: "24/7 Support" },
                   { icon: MapPin, title: "Office", detail: "1 patton street Maitland", sub: "cape Town South Africa, 7404" },
                   { icon: Globe, title: "Social", detail: "Vengeance Cleaning", sub: "Follow our work" },
                 ].map((item, i) => (
@@ -78,11 +78,34 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100 shadow-sm">
               <h3 className="text-2xl font-bold text-slate-900 mb-8">Send us a Message</h3>
-              <form className="space-y-6">
+              <form 
+                className="space-y-6"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const firstName = formData.get("firstName");
+                  const lastName = formData.get("lastName");
+                  const email = formData.get("email");
+                  const service = formData.get("service");
+                  const message = formData.get("message");
+                  
+                  const subject = encodeURIComponent(`New Contact Request: ${service || 'General Inquiry'}`);
+                  const body = encodeURIComponent(
+                    `Name: ${firstName} ${lastName}\n` +
+                    `Email: ${email}\n` +
+                    `Service: ${service}\n\n` +
+                    `Message:\n${message}`
+                  );
+                  
+                  window.location.href = `mailto:info@vengeancecleaningcompany.co.za?subject=${subject}&body=${body}`;
+                }}
+              >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">First Name</label>
                     <input
+                      required
+                      name="firstName"
                       type="text"
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white"
                       placeholder="John"
@@ -91,6 +114,8 @@ export default function Contact() {
                   <div className="space-y-2">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Last Name</label>
                     <input
+                      required
+                      name="lastName"
                       type="text"
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white"
                       placeholder="Doe"
@@ -100,6 +125,8 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Email Address</label>
                   <input
+                    required
+                    name="email"
                     type="email"
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white"
                     placeholder="john@example.com"
@@ -107,7 +134,11 @@ export default function Contact() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Service Needed</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white appearance-none">
+                  <select 
+                    required
+                    name="service"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white appearance-none"
+                  >
                     <option value="">Select a service</option>
                     {SERVICES.map((s) => (
                       <option key={s.id} value={s.id}>{s.title}</option>
@@ -117,6 +148,8 @@ export default function Contact() {
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">Message</label>
                   <textarea
+                    required
+                    name="message"
                     rows={5}
                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-sky-500 focus:ring-2 focus:ring-sky-200 outline-none transition-all bg-white resize-none"
                     placeholder="How can we help you?"
